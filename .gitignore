@@ -20,7 +20,7 @@
 *.rar
 *.gradle
 *.html
-*.javascript
+*.js
 *.css
 *.idea
 .gradle/
