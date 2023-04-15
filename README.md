@@ -19,3 +19,41 @@ For updating of incident listen to topic --> update-incident
     ```
         gradle bootrun
     ```
+
+## API Reference
+
+#### Create an incident
+
+```http
+  POST /incident/create-incident
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `title` | `string` | **Required**. Title on incident |
+| `description` | `string` | **Required**. Description of incident |
+| `address` | `string` | **Required**. Location of incident |
+| `phone` | `string` | **Required**. Phone number of creator |
+
+
+#### Update an incident
+
+```http
+  POST /incident/update-incident
+```
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `id`      | `string` | **Required**. Id of item to update |
+| `title` | `string` | **Required**. Title on incident |
+| `description` | `string` | **Required**. Description of incident |
+| `address` | `string` | **Required**. Location of incident |
+| `phone` | `string` | **Required**. Phone number of creator |
+
+#### Delete an incident
+
+```http
+  DELETE /{incidentId}
+```
+
+
