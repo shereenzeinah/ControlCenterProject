@@ -1,6 +1,0 @@
-{
-  "timestamp": "2023-04-12T13:11:57.170+00:00",
-  "status": 415,
-  "error": "Unsupported Media Type",
-  "path": "/incident/create-incident"
-}
