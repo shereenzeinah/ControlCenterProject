@@ -18,14 +18,14 @@ public class IncidentServiceImpl implements IncidentService {
 
     @Override
     public WSIncidentResponse createIncident(WSCreateIncidentRequest wsCreateIncidentRequest) {
-        kafkaSender.createIncident(wsCreateIncidentRequest.getCreatedDate(), CREATE_INCIDENT_TOPIC);
+        kafkaSender.createIncident(wsCreateIncidentRequest.toString(), CREATE_INCIDENT_TOPIC);
         WSIncidentResponse response = new WSIncidentResponse("Created successfully");
         return response;
     }
 
     @Override
     public WSIncidentResponse updateIncident(WSCreateIncidentRequest wsCreateIncidentRequest) {
-        kafkaSender.updateIncident(wsCreateIncidentRequest.getCreatedDate(), UPDATE_INCIDENT_TOPIC);
+        kafkaSender.updateIncident(wsCreateIncidentRequest.toString(), UPDATE_INCIDENT_TOPIC);
         WSIncidentResponse response = new WSIncidentResponse("Updated successfully");
         return response;
     }

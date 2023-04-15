@@ -9,8 +9,9 @@ import lombok.Setter;
 @Setter
 public class WSCreateIncidentRequest {
     private int id;
-    private String creatorName;
-    private String location;
-    private String creatorPhoneNumber;
+    private String title;
+    private String address;
+    private String phone;
+    private String description;
     private String createdDate;
 }
