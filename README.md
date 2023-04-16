@@ -56,4 +56,10 @@ For updating of incident listen to topic --> update-incident
   DELETE /{incidentId}
 ```
 
+#### Get all incidents
+
+```http
+  GET /incident/all
+```
+
 
