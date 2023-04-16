@@ -1,7 +1,7 @@
 package com.assignment.ControlCenter.api.incident;
 
 import com.assignment.ControlCenter.api.incident.ws.WSIncidentResponse;
-import com.assignment.ControlCenter.api.incident.ws.WSCreateIncidentRequest;
+import com.assignment.ControlCenter.api.incident.ws.WSIncidentRequest;
 import com.assignment.ControlCenter.service.incident.IncidentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -14,19 +14,19 @@ public class IncidentApi {
     private IncidentService incidentService;
 
     @PostMapping(path = "/create-incident", produces = "application/json" , consumes = "application/json")
-    public ResponseEntity<WSIncidentResponse> createIncident(@RequestBody WSCreateIncidentRequest wsCreateIncidentRequest) {
-        WSIncidentResponse response = incidentService.createIncident(wsCreateIncidentRequest);
+    public ResponseEntity<WSIncidentResponse> createIncident(@RequestBody WSIncidentRequest wsIncidentRequest) {
+        WSIncidentResponse response = incidentService.createIncident(wsIncidentRequest);
         return ResponseEntity.ok(response);
     }
 
     @PostMapping(path = "/update-incident", produces = "application/json" , consumes = "application/json")
-    public ResponseEntity<WSIncidentResponse> updateIncident(@RequestBody WSCreateIncidentRequest wsCreateIncidentRequest) {
-        WSIncidentResponse response = incidentService.updateIncident(wsCreateIncidentRequest);
+    public ResponseEntity<WSIncidentResponse> updateIncident(@RequestBody WSIncidentRequest wsIncidentRequest) {
+        WSIncidentResponse response = incidentService.updateIncident(wsIncidentRequest);
         return ResponseEntity.ok(response);
     }
 
-    @DeleteMapping(value = "/incident/{id}")
-    public ResponseEntity<WSIncidentResponse> deletePost(@PathVariable Long id) {
+    @DeleteMapping(value = "/{id}")
+    public ResponseEntity<WSIncidentResponse> deletePost(@PathVariable int id) {
         WSIncidentResponse response = incidentService.deleteIncident(id);
         return ResponseEntity.ok(response);
     }

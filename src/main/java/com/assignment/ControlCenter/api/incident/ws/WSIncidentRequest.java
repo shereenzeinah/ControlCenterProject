@@ -2,12 +2,14 @@ package com.assignment.ControlCenter.api.incident.ws;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Getter
 @Setter
-public class WSCreateIncidentRequest {
+public class WSIncidentRequest {
     private int id;
     private String title;
     private String address;
