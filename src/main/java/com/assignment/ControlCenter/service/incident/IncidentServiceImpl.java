@@ -18,7 +18,7 @@ public class IncidentServiceImpl implements IncidentService {
     private final String CREATE_INCIDENT_TOPIC = "create-incident";
     private final String UPDATE_INCIDENT_TOPIC = "update-incident";
     private final String DELETE_INCIDENT_TOPIC = "delete-incident";
-    private final String FETCH_INCIDENTS_URL = "http://localhost:8080/incident/all";
+    private final String FETCH_INCIDENTS_URL = "http://localhost:8081/incident/all";
 
     @Override
     public WSIncidentResponse createIncident(WSIncidentRequest wsIncidentRequest) {
