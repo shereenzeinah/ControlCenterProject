@@ -10,7 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class WSIncidentRequest {
-    private int id;
+    private String id;
     private String title;
     private String address;
     private String phone;

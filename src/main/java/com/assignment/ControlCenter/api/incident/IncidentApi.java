@@ -26,7 +26,7 @@ public class IncidentApi {
     }
 
     @DeleteMapping(value = "/{id}")
-    public ResponseEntity<WSIncidentResponse> deletePost(@PathVariable int id) {
+    public ResponseEntity<WSIncidentResponse> deletePost(@PathVariable String id) {
         WSIncidentResponse response = incidentService.deleteIncident(id);
         return ResponseEntity.ok(response);
     }

@@ -31,7 +31,7 @@ public class IncidentServiceImpl implements IncidentService {
     }
 
     @Override
-    public WSIncidentResponse deleteIncident(int id) {
+    public WSIncidentResponse deleteIncident(String id) {
         WSIncidentRequest wsDeleteRequest = new WSIncidentRequest();
         wsDeleteRequest.setId(id);
         KafkaJsontemplate.send(DELETE_INCIDENT_TOPIC, wsDeleteRequest);

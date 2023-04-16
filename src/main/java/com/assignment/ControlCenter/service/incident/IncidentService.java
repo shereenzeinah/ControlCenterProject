@@ -7,5 +7,5 @@ public interface IncidentService {
 
      WSIncidentResponse createIncident (WSIncidentRequest wsIncidentRequest);
      WSIncidentResponse updateIncident (WSIncidentRequest wsIncidentRequest);
-     WSIncidentResponse deleteIncident(int id);
+     WSIncidentResponse deleteIncident(String id);
 }
