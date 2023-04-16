@@ -1,5 +1,6 @@
 package com.assignment.ControlCenter.api.incident;
 
+import com.assignment.ControlCenter.api.incident.ws.WSFetchIncidentResponse;
 import com.assignment.ControlCenter.api.incident.ws.WSIncidentResponse;
 import com.assignment.ControlCenter.api.incident.ws.WSIncidentRequest;
 import com.assignment.ControlCenter.service.incident.IncidentService;
@@ -28,6 +29,12 @@ public class IncidentApi {
     @DeleteMapping(value = "/{id}")
     public ResponseEntity<WSIncidentResponse> deletePost(@PathVariable String id) {
         WSIncidentResponse response = incidentService.deleteIncident(id);
+        return ResponseEntity.ok(response);
+    }
+
+    @GetMapping(value = "/all")
+    public ResponseEntity<WSFetchIncidentResponse[]> getAllIncidents() {
+        WSFetchIncidentResponse[] response = incidentService.fetchIncidents();
         return ResponseEntity.ok(response);
     }
     @Autowired
